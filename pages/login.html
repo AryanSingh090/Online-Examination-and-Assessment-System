@@ -1,41 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - ExamPro</title>
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <div class="card">
-        <h1 class="page-title">Login</h1>
-        <form class="form-box">
-          <div class="input-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="student@example.com" />
-          </div>
-
-          <div class="input-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter password" />
-          </div>
-
-          <div class="input-group">
-            <label for="role">Role</label>
-            <select id="role">
-              <option>Student</option>
-              <option>Teacher</option>
-              <option>Admin</option>
-            </select>
-          </div>
-
-          <div class="cta-group">
-            <a href="student-dashboard.html" class="btn btn-primary">Login</a>
-            <a href="../index.html" class="btn btn-secondary">Back Home</a>
-          </div>
-        </form>
-      </div>
-    </div>
-  </body>
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Login</title><link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="topbar"><h1>Login Portal</h1><p>Member 1 - Authentication Module</p></header>
+<main class="container">
+<section class="card">
+<h2>Login</h2>
+<form>
+<label>Email</label><input type="email" placeholder="Enter email" required>
+<label>Password</label><input type="password" placeholder="Enter password" required>
+<label>Role</label>
+<select><option>Student</option><option>Teacher</option></select>
+<button type="submit">Login</button>
+</form>
+<p style="margin-top:15px">Demo links:</p>
+<a class="action" href="student-dashboard.html">Student Dashboard</a>
+<a class="action" href="teacher-dashboard.html">Teacher Dashboard</a>
+</section>
+</main>
+<footer>Authentication Module</footer>
+</body>
 </html>
