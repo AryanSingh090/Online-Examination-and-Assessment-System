@@ -9,6 +9,11 @@ const dashboardByRole = {
     teacher: "teacher-dashboard.html",
 };
 
+function showValidationError(text, input) {
+    message.textContent = text;
+    input.focus();
+}
+
 loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -19,32 +24,30 @@ loginForm.addEventListener("submit", function (event) {
     message.textContent = "";
 
     if (email === "") {
-        message.textContent = "Please enter your email address.";
-        emailInput.focus();
+        showValidationError("Please enter your email address.", emailInput);
         return;
     }
 
     if (!emailInput.validity.valid) {
-        message.textContent = "Please enter a valid email address.";
-        emailInput.focus();
+        showValidationError("Please enter a valid email address.", emailInput);
         return;
     }
 
     if (password.trim() === "") {
-        message.textContent = "Please enter your password.";
-        passwordInput.focus();
+        showValidationError("Please enter your password.", passwordInput);
         return;
     }
 
     if (password.length < 6) {
-        message.textContent = "Password must contain at least 6 characters.";
-        passwordInput.focus();
+        showValidationError(
+            "Password must contain at least 6 characters.",
+            passwordInput
+        );
         return;
     }
 
     if (!Object.prototype.hasOwnProperty.call(dashboardByRole, role)) {
-        message.textContent = "Please select a valid role.";
-        roleInput.focus();
+        showValidationError("Please select a valid role.", roleInput);
         return;
     }
 
