@@ -16,7 +16,7 @@ Online Examination and Assessment System - Full Stack Project
 
 - Responsive landing page
 - Login form
-- Front-end email/password validation and role-based dashboard navigation
+- Front-end email/password validation with student/teacher dashboard routing
 - Student dashboard
 - Teacher dashboard
 - Exam page
@@ -25,6 +25,8 @@ Online Examination and Assessment System - Full Stack Project
 ## How to run
 
 Open `index.html` in a browser.
+
+Choose Student or Teacher in the login form to open the matching dashboard.
 
 The login flow is a front-end demo only. It does not authenticate credentials or
 connect to a backend.
