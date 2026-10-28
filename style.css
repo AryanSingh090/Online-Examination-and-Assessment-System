@@ -278,6 +278,37 @@ textarea {
   font-size: 1rem;
 }
 
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.form-box #message {
+  margin: 0;
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.form-box #message:empty {
+  display: none;
+}
+
+.form-box [role="note"] {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+button.btn {
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
