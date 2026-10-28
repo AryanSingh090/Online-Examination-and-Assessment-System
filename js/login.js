@@ -7,7 +7,6 @@ const message = document.getElementById("message");
 const dashboardByRole = {
     student: "student-dashboard.html",
     teacher: "teacher-dashboard.html",
-    admin: "admin-dashboard.html",
 };
 
 loginForm.addEventListener("submit", function (event) {

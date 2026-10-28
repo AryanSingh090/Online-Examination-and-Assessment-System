@@ -9,7 +9,6 @@ Online Examination and Assessment System - Full Stack Project
 - pages/login.html
 - pages/student-dashboard.html
 - pages/teacher-dashboard.html
-- pages/admin-dashboard.html
 - pages/exam.html
 - pages/result.html
 
