@@ -25,7 +25,9 @@
             <input
               type="email"
               id="email"
+              name="email"
               placeholder="student@example.com"
+              autocomplete="email"
               required
             />
           </div>
@@ -35,7 +37,10 @@
             <input
               type="password"
               id="password"
+              name="password"
               placeholder="Enter password"
+              autocomplete="current-password"
+              minlength="6"
               required
             />
           </div>
@@ -43,13 +48,14 @@
           <div class="input-group">
             <label for="role">Role</label>
 
-            <select id="role" required>
+            <select id="role" name="role" required>
+              <option value="" disabled selected>Select your role</option>
               <option value="student">Student</option>
               <option value="teacher">Teacher</option>
             </select>
           </div>
 
-          <p role="note">Demo only: account credentials are not authenticated.</p>
+          <p id="login-note" role="note">Demo only: account credentials are not authenticated.</p>
           <p id="message" role="alert" aria-live="polite"></p>
 
           <div class="cta-group">
