@@ -1,4 +1,3 @@
-```html
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,7 +6,7 @@
 
     <title>Login - ExamPro</title>
 
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -15,7 +14,12 @@
       <div class="card">
         <h1 class="page-title">Login</h1>
 
-        <form class="form-box" id="loginForm" novalidate>
+        <form
+          class="form-box"
+          id="loginForm"
+          data-dashboard-prefix="pages/"
+          novalidate
+        >
           <div class="input-group">
             <label for="email">Email Address</label>
             <input
@@ -46,18 +50,18 @@
             </select>
           </div>
 
+          <p role="note">Demo only: account credentials are not authenticated.</p>
           <p id="message" role="alert" aria-live="polite"></p>
 
           <div class="cta-group">
             <button type="submit" class="btn btn-primary">Login</button>
 
-            <a href="../index.html" class="btn btn-secondary"> Back Home </a>
+            <a href="index.html" class="btn btn-secondary">Back Home</a>
           </div>
         </form>
       </div>
     </div>
 
-    <script src="../js/login.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>
-```
