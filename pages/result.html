@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam Result | ExamPro</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js" defer></script>
+  </head>
+  <body data-page="result">
+    <header class="topbar">
+      <a class="brand" href="exam.html">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span>ExamPro</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="exam.html">Exams and results</a>
+      </nav>
+    </header>
+    <div class="page-shell">
+      <main class="card">
+        <p class="eyebrow">Examination complete</p>
+        <h1 class="page-title">Exam Result</h1>
+        <div id="result-summary" aria-live="polite"></div>
+        <p id="result-message" class="message" role="status" aria-live="polite"></p>
+        <section id="answer-review" class="answer-review" aria-label="Answer review"></section>
+        <div class="cta-group">
+          <a href="exam.html" class="btn btn-primary">Back to exams and results</a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
