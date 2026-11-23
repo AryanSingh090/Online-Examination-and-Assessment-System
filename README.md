@@ -1,25 +1,20 @@
-# Online-Examination-and-Assessment-System
-Online Examination and Assessment System - Full Stack Project
+# Exam and Results Portal
 
-## Project Structure
+## Project structure
 
-- index.html
-- style.css
-- pages/login.html
-- pages/student-dashboard.html
-- pages/teacher-dashboard.html
 - pages/exam.html
 - pages/result.html
+- style.css
+- script.js
 
 ## Features
 
-- Responsive landing page
-- Login form
-- Student dashboard
-- Teacher dashboard
-- Exam page
-- Result page
+- Choose from scheduled exams in the exam portal.
+- Take timed multiple-choice exams and mark questions for review.
+- Resume an in-progress attempt after reloading the page.
+- Review saved results and answers.
+- Exams, questions, attempts, and results use browser localStorage.
 
-## How to run
+## How to open
 
-Open `index.html` in a browser.
+Open `pages/exam.html` in a browser. The portal reads scheduled tests and questions from browser localStorage for the same origin.
