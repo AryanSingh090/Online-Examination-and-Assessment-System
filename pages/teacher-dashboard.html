@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teacher Dashboard | Assessly</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js" defer></script>
+  </head>
+  <body data-page="dashboard">
+    <header class="topbar">
+      <a class="brand" href="teacher-dashboard.html">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>ExamPro</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="teacher-dashboard.html" aria-current="page">Dashboard</a>
+        <a href="create-test.html">Question bank</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="dashboard-heading">
+        <div>
+          <p class="eyebrow">Teacher workspace</p>
+          <h1 class="page-title">Welcome back, Teacher</h1>
+          <p class="muted-copy">Create a test, choose questions, and keep track of your assessments.</p>
+        </div>
+        <a href="create-test.html" class="btn btn-primary">＋ Create new test</a>
+      </section>
+
+      <section class="dashboard-grid dashboard-summary" aria-label="Assessment overview">
+        <article class="metric">
+          <h2>All tests</h2>
+          <p id="test-count">0</p>
+        </article>
+        <article class="metric">
+          <h2>Upcoming tests</h2>
+          <p id="upcoming-count">0</p>
+        </article>
+        <article class="metric">
+          <h2>Questions in bank</h2>
+          <p id="question-count">0</p>
+        </article>
+      </section>
+
+      <section class="card records-card" aria-labelledby="records-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Your assessments</p>
+            <h2 id="records-title">Past test records</h2>
+          </div>
+          <a class="text-link" href="create-test.html">Manage question bank <span aria-hidden="true">→</span></a>
+        </div>
+        <p id="dashboard-message" class="message" role="status" aria-live="polite"></p>
+        <div class="table-wrap">
+          <table class="records-table">
+            <thead>
+              <tr>
+                <th scope="col">Test</th>
+                <th scope="col">Date and time</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Questions</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody id="test-records"></tbody>
+          </table>
+        </div>
+        <p id="empty-records" class="empty-state">No tests yet. Create your first test to see it listed here.</p>
+      </section>
+    </main>
+  </body>
+</html>

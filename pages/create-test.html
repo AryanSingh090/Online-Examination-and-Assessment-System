@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a test | Assessly</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js" defer></script>
+  </head>
+  <body data-page="create-test">
+    <header class="topbar">
+      <a class="brand" href="teacher-dashboard.html">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>Assessly</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="teacher-dashboard.html">Dashboard</a>
+        <a href="create-test.html" aria-current="page">Question bank</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <a class="back-link" href="teacher-dashboard.html">← Back to dashboard</a>
+      <div class="builder-heading">
+        <div>
+          <p class="eyebrow">Assessment setup</p>
+          <h1 class="page-title">Create a new test</h1>
+          <p class="muted-copy">Set the schedule, then choose questions from your question bank.</p>
+        </div>
+      </div>
+
+      <p id="builder-message" class="message" role="status" aria-live="polite"></p>
+
+      <form id="test-form" class="card test-form">
+        <section aria-labelledby="schedule-title">
+          <div class="section-heading compact-heading">
+            <div>
+              <p class="eyebrow">Step 1</p>
+              <h2 id="schedule-title">Test details</h2>
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="input-group form-span">
+              <label for="test-title">Test name</label>
+              <input id="test-title" name="title" type="text" placeholder="e.g. Biology midterm" required maxlength="100" />
+            </div>
+            <div class="input-group">
+              <label for="test-date">Test date</label>
+              <input id="test-date" name="date" type="date" required />
+            </div>
+            <div class="input-group">
+              <label for="test-time">Start time</label>
+              <input id="test-time" name="time" type="time" required />
+            </div>
+            <div class="input-group">
+              <label for="test-duration">Duration (minutes)</label>
+              <input id="test-duration" name="duration" type="number" min="1" step="1" placeholder="60" required />
+            </div>
+          </div>
+        </section>
+
+        <section class="bank-section" aria-labelledby="bank-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Step 2</p>
+              <h2 id="bank-title">Choose questions</h2>
+              <p class="muted-copy">Select the questions you want to include in this test.</p>
+            </div>
+            <span id="selected-count" class="selection-count" aria-live="polite">0 selected</span>
+          </div>
+          <div id="question-list" class="question-bank"></div>
+          <p id="empty-bank" class="empty-state" hidden>Your question bank is empty. Add a question to get started.</p>
+        </section>
+
+        <div class="form-actions">
+          <a class="btn btn-secondary" href="teacher-dashboard.html">Cancel</a>
+          <button class="btn btn-primary" type="submit">Schedule test</button>
+        </div>
+      </form>
+
+      <section class="card add-question-card" aria-labelledby="add-question-title">
+        <div class="section-heading compact-heading">
+          <div>
+            <p class="eyebrow">Grow your bank</p>
+            <h2 id="add-question-title">Add a question</h2>
+            <p class="muted-copy">Write a question and all four answer options. Choose the correct answer for marking.</p>
+          </div>
+        </div>
+        <form id="question-form" class="question-form">
+          <div class="input-group">
+            <label for="question-text">Question</label>
+            <textarea id="question-text" name="question" rows="3" required maxlength="500" placeholder="Type your question here"></textarea>
+          </div>
+          <div class="form-grid option-grid">
+            <div class="input-group">
+              <label for="option-a">Option A</label>
+              <input id="option-a" name="optionA" type="text" required maxlength="200" />
+            </div>
+            <div class="input-group">
+              <label for="option-b">Option B</label>
+              <input id="option-b" name="optionB" type="text" required maxlength="200" />
+            </div>
+            <div class="input-group">
+              <label for="option-c">Option C</label>
+              <input id="option-c" name="optionC" type="text" required maxlength="200" />
+            </div>
+            <div class="input-group">
+              <label for="option-d">Option D</label>
+              <input id="option-d" name="optionD" type="text" required maxlength="200" />
+            </div>
+          </div>
+          <div class="question-form-footer">
+            <div class="input-group correct-answer-field">
+              <label for="correct-answer">Correct answer</label>
+              <select id="correct-answer" name="correctAnswer" required>
+                <option value="0">Option A</option>
+                <option value="1">Option B</option>
+                <option value="2">Option C</option>
+                <option value="3">Option D</option>
+              </select>
+            </div>
+            <button class="btn btn-secondary" type="submit">＋ Add to question bank</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
