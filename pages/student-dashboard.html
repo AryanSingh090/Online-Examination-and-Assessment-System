@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard | ExamPro</title>
+    <link rel="stylesheet" href="../student.css" />
+    <script src="../student.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand student-brand" href="student-dashboard.html">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span>ExamPro</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="student-dashboard.html" aria-current="page">My dashboard</a>
+        <a href="exam.html">Exam portal</a>
+      </nav>
+    </header>
+
+    <main class="page-shell student-page">
+      <section class="student-welcome">
+        <div>
+          <p class="eyebrow">Student workspace</p>
+          <h1 class="page-title">Your learning dashboard</h1>
+          <p class="student-intro">Find an available test, continue an exam, or review your past results.</p>
+        </div>
+        <a class="btn btn-primary attempt-test-button" href="exam.html">Attempt a test <span aria-hidden="true">→</span></a>
+      </section>
+
+      <p id="student-message" class="student-message" role="status" aria-live="polite"></p>
+
+      <section class="student-stats" aria-label="Your exam summary">
+        <article class="student-stat">
+          <span class="student-stat-label">Available tests</span>
+          <strong id="available-count">0</strong>
+        </article>
+        <article class="student-stat">
+          <span class="student-stat-label">Upcoming tests</span>
+          <strong id="upcoming-count">0</strong>
+        </article>
+        <article class="student-stat">
+          <span class="student-stat-label">Completed tests</span>
+          <strong id="completed-count">0</strong>
+        </article>
+        <article class="student-stat">
+          <span class="student-stat-label">Average score</span>
+          <strong id="average-score">—</strong>
+        </article>
+      </section>
+
+      <section class="student-section" aria-labelledby="tests-heading">
+        <div class="student-section-heading">
+          <div>
+            <p class="eyebrow">Your schedule</p>
+            <h2 id="tests-heading">Tests</h2>
+          </div>
+          <a class="student-section-link" href="exam.html">Open exam portal <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="student-table-wrap">
+          <table id="tests-table" class="student-table" hidden>
+            <thead>
+              <tr>
+                <th scope="col">Test</th>
+                <th scope="col">Date and time</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Questions</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="tests-list"></tbody>
+          </table>
+        </div>
+        <p id="empty-tests" class="student-empty-state" hidden>No tests have been scheduled yet. Check back later or open the exam portal.</p>
+      </section>
+
+      <section class="student-section" aria-labelledby="results-heading">
+        <div class="student-section-heading">
+          <div>
+            <p class="eyebrow">Past performance</p>
+            <h2 id="results-heading">Past tests and results</h2>
+          </div>
+        </div>
+        <div class="student-table-wrap">
+          <table id="results-table" class="student-table" hidden>
+            <thead>
+              <tr>
+                <th scope="col">Test</th>
+                <th scope="col">Completed</th>
+                <th scope="col">Score</th>
+                <th scope="col">Percentage</th>
+                <th scope="col">Result</th>
+              </tr>
+            </thead>
+            <tbody id="results-list"></tbody>
+          </table>
+        </div>
+        <p id="empty-results" class="student-empty-state" hidden>You have not completed a test yet. Completed tests and scores will appear here.</p>
+      </section>
+    </main>
+  </body>
+</html>
